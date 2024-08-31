@@ -52,63 +52,80 @@ Save and open this file up in a web browser and then open up the browser’s con
 2. Click on “Inspect” or “Inspect Element” to open the Developer Tools.
 3. Find and select the “Console” tab, where you should see the output of our `console.log` statement.
 
-Tip: You can use “Live Server” extension in Visual Studio Code" to automatically update the browser when you save your file instead of having to manually refresh the page to see any changes when you edit your code. Try edit the text to say something different!
+Tip: You can use [“Live Server” extension in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to automatically update the browser when you save your file instead of having to manually refresh the page to see any changes when you edit your code. Try edit the text to say something different!
 
 `console.log()` is the command to print something to the developer console in your browser. You can use this to print the results from any of the following articles and exercises to the console. We encourage you to code along with all of the examples in this and future lessons.
 
 Another way to include JavaScript in a webpage is through an external script. This is very similar to linking external CSS docs to your website.
 
+```script
 <script src="javascript.js"></script>
-JavaScript files have the extension .js similar to .css for stylesheets. External JavaScript files are used for more complex scripts.
+```
 
-We named our file javascript.js but we could have chosen any name like my-script.js or even no name .js. What is really important is the .js extension.
+JavaScript files have the extension `.js` similar to `.css` for stylesheets. External JavaScript files are used for more complex scripts.
 
-Variables
+We named our file `javascript.js` but we could have chosen any name like `my-script.js` or even no name `.js`. What is really important is the `.js` extension.
+
+**Variables**
+
 These are the building blocks of any program, you can think of variables as “storage containers” for data in your code.
 
 Variable Box Illustration
 
-You can declare variables using the let keyword. Let’s try it! (No pun intended).
+You can declare variables using the `let` keyword. Let’s try it! (No pun intended).
 
+```let
 let name = "John";
 let surname = "Doe";
 
 console.log(name);
 console.log(surname);
-What will the console.log output? Try it out!
+```
+
+What will the `console.log` output? Try it out!
 
 You can also re-assign variables:
 
+```let
 let age = 11;
 console.log(age); // outputs 11 to the console
 
 age = 54;
  
 console.log(age); // what will be output now?
-Notice the lack of let on line 4 - we don’t need it since the variable has already been declared earlier and we are just re-assigning it here!
+```
 
-Re-assigning is cool and all, but what if we don’t want it to happen? For example we might have a constant pi which will never change. We can accomplish this using the const keyword.
+Notice the lack of `let` on line 4 - we don’t need it since the variable has already been declared earlier and we are just re-assigning it here!
 
+Re-assigning is cool and all, but what if we don’t want it to happen? For example we might have a *constant* `pi` which will never change. We can accomplish this using the `const` keyword.
+
+```const
 const pi = 3.14;
 pi = 10;
 
 console.log(pi); // What will be output?
-Your intuition may tell you that 3.14 will be output. Try it!
+```
 
-An error is thrown. It doesn’t even reach the console.log! You may wonder why we would want an error in our code. Truth be told, errors are incredibly helpful at telling us what is wrong with our code and exactly where the issue is. Without them, our code would still not do what we may want it to, but it would be a major pain to try and find what’s wrong!
+Your intuition may tell you that `3.14` will be output. Try it!
+
+An error is thrown. It doesn’t even reach the `console.log`! You may wonder why we would want an error in our code. Truth be told, errors are incredibly helpful at telling us what is wrong with our code and exactly where the issue is. Without them, our code would still not do what we may want it to, but it would be a major pain to try and find what’s wrong!
 
 So in summary, there are two ways to declare a variable:
 
-let, which we can re-assign.
-const which we can’t re-assign and will throw an error if we try.
-There is also a third way, var, which was the original way variables were declared in JavaScript. var is similar to let in that variables assigned this way can be reassigned, but it has other quirks that were cleared up when the language introduced let and const. By and large, it is not used anymore. However, you will likely come across code which uses var at some point, so it is useful to know that it exists.
+- `let`, which we can re-assign.
+- `const` which we can’t re-assign and will throw an error if we try.
 
-Numbers
+There is also a third way, `var`, which was the original way variables were declared in JavaScript. `var` is similar to `let` in that variables assigned this way can be reassigned, but it has other quirks that were cleared up when the language introduced `let` and `const`. By and large, it is not used anymore. However, you will likely come across code which uses `var` at some point, so it is useful to know that it exists.
+
+**Numbers**
+
 Numbers are the building blocks of programming logic! In fact, it’s hard to think of any useful programming task that doesn’t involve at least a little basic math… so knowing how numbers work is obviously quite important. Luckily, it’s also fairly straightforward.
 
-If you went to school, you will likely not find the concept too difficult to grasp. For example, the mathematical expression (3 + 2) - 76 * (1 + 1) is also valid JavaScript. If you put that into a console.log, it’ll evaluate the expression and output the correct number. Try it!
+If you went to school, you will likely not find the concept too difficult to grasp. For example, the mathematical expression `(3 + 2) - 76 * (1 + 1)` is also valid JavaScript. If you put that into a `console.log`, it’ll evaluate the expression and output the correct number. Try it!
 
-Assignment
+**Assignment**
+
+```try
 Try the following exercises (and don’t forget to use console.log()!):
 
 Add 2 numbers together! (just type console.log(23 + 97) into your HTML file or the browser console)
@@ -131,7 +148,12 @@ Go through the following articles to deepen your knowledge.
 This W3Schools lesson on JavaScript arithmetic followed by this on JavaScript numbers, are good introductions to what you can accomplish with numbers in JavaScript.
 This MDN article on JavaScript math covers the same info from a slightly different point of view, while also teaching you how to apply some basic math in JavaScript. There’s much more that you can do with numbers, but this is all you need at the moment.
 Read through (and code along with!) this article on JavaScript operators. Don’t forget to do the “Tasks” at the bottom of the page! It will give you a pretty good idea of what you can accomplish with numbers (among other things!) in JavaScript.
-As you might have noticed by running JavaScript code in the console, the console prints the result of the code it executes (called a return statement). You will learn more about these in the next lessons, however for now it is good to remember that a declaration with an assignment (such as let b = 7 * a) returns undefined and so you cannot declare and assign a value to a variable and read its value in the same line.
+
+> As you might have noticed by running JavaScript code in the console, the console  prints the result of the code it executes (called a return statement). You will  
+learn more about these in the next lessons, however for now it is good to 
+remember that a declaration with an assignment (such as let b = 7 * a) returns 
+undefined and so you cannot declare and assign a value to a variable and read its  value in the same line. <
+```
 
 Knowledge check
 The following questions are an opportunity to reflect on key topics in this lesson. If you can’t answer a question, click on it to review the material, but keep in mind you are not expected to memorize or master this knowledge.
